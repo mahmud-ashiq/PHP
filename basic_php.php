@@ -61,6 +61,8 @@
     }
 
     echo addNumbers(10, 20);
+
+    echo "Hello ";
     ?>
 </body>
 
