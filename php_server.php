@@ -5,3 +5,4 @@ echo $_SERVER['HTTP_HOST'] . "<br>";
 echo $_SERVER['HTTP_ACCEPT'] . "<br>";
 echo $_SERVER['HTTP_USER_AGENT'] . "<br>";
 echo $_SERVER['SCRIPT_NAME'] . "<br>";
+?>
