@@ -1,16 +1,22 @@
+<?php include '../controller/patientControl.php'; ?>
 <html>
     <body>
-        <h1>Patient Registration</h1>
         <form method="POST" action="">
-            <table>
+        <fieldset>
+            <legend>Patient Registration</legend>    
+        <table>
                 <tr>
                     <td>Full Name:</td>
-                    <td><input type="text" name="name"></td>
+                    <td><input type="text" name="name">
+                    <?php echo $nameError; ?>
+                    <?php echo $name; ?></td>
                 </tr>
                 <tr><td><br> </td></tr>
                 <tr>
                     <td>Date of Birth: </td>
-                    <td colspan="2"><input type="date" name="dob"></td>
+                    <td><input type="date" name="dob">
+                    <?php echo $dob; ?>
+                    <?php echo $dobError; ?></td>
                     <td></td>
                 </tr>
                 <tr><td><br> </td></tr>
@@ -24,17 +30,22 @@
                 <tr><td><br> </td></tr>
                 <tr>
                     <td>Contact Number:</td>
-                    <td><input type="text" name="contact"></td>
+                    <td><input type="text" name="phone">
+                    <?php echo $phoneError; ?>
+                    <?php echo $phone; ?></td>
                 </tr>
                 <tr><td><br> </td></tr>
                 <tr>
                     <td>Email:</td>
-                    <td><input type="text" name="email"></td>
+                    <td><input type="text" name="email">
+                    <?php echo $emailError; ?>
+                    <?php echo $email; ?></td>
                 </tr>
                 <tr><td><br> </td></tr>
                 <tr>
-                    <td>Address:</td>
-                    <td><input type="text" name="s_address"></td>
+                    <td>Password:</td>
+                    <td><input type="text" name="password">
+                    <?php echo $passwordError; ?></td>
                 </tr>
                 <tr><td></td><td>Street Address</td></tr>
                 <tr>
@@ -86,6 +97,7 @@
                 
                 <tr><td><input type="submit" value="Submit" name="submit"</td></tr>
             </table>
+            </fieldset>
         </form>
     </body>
 </html>
