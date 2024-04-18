@@ -1,13 +1,15 @@
-<?php include '../controller/patientControl.php'; ?>
+<?php include '../controller/patientControl.php'; 
+    include '../js/myscript.js';?>
 <html>
+
     <body>
-        <form method="POST" action="">
+        <form method="POST" action="" onsubmit="return validateForm()">
         <fieldset>
             <legend>Patient Registration</legend>    
         <table>
                 <tr>
                     <td>Full Name:</td>
-                    <td><input type="text" name="name">
+                    <td><input type="text" name="name" id="name">
                     <?php echo $nameError; ?>
                     <?php echo $name; ?></td>
                 </tr>
