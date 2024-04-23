@@ -30,6 +30,12 @@ class Model{
         return $conn->query($sql);
     }
 
+    function ShowUser($conn)
+    {
+        $sql = "SELECT *  FROM patient";
+        return $conn->query($sql);
+    }
+
 
 
     
