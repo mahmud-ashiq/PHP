@@ -1,4 +1,7 @@
 <html>
+    <head>
+    <link rel="stylesheet" href="../css/loginStyle.css">
+    </head>
     <body>
         <form method="POST" action="">
             <table>

@@ -1,4 +1,6 @@
-<?php include '../controller/patientControl.php';?>
+<?php include '../controller/patientControl.php';
+
+?>
 <html>
 <head>
     <script src="../js/myscript.js"></script>
@@ -11,7 +13,7 @@
         <table>
                 <tr>
                     <td>Full Name</td>
-                    <td colspan="3"><input type="text" name="name" id="name">
+                    <td colspan="3"><input type="text" name="name" id="name" onkeyup="loadDoc()">
                     <?php echo $nameError; ?>
                     <?php echo $name; ?></td>
                 </tr>
@@ -52,14 +54,6 @@
                     <?php echo $passwordError; ?></td>
                 </tr>
 
-                <tr>
-                    <td>Weight:</td>
-                    <td><input type="text" name="age" id="age"></td>
-
-                    <td>Height (inches):</td>
-                    <td><input type="text" name="height"></td>
-                </tr>
-
                 <tr><td>Street Address</td>
                     <td colspan=3><input type="text" name="city" id="address"></td><td><p id="add"></p></td>
                 </tr>
@@ -83,6 +77,7 @@
                 </tr>
                 
                 <tr><td></td><td colspan=3><input type="submit" value="Submit" name="submit"</td></tr>
+                <tr><td><p id="demo"></p> </td></tr>
             </table>
             </fieldset>
         </form>
