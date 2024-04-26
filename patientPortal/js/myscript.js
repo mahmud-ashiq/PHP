@@ -29,19 +29,29 @@ function loadDoc() {
   xhttp.onload = function () {
     document.getElementById("demo").innerHTML = this.responseText;
   }
+<<<<<<< HEAD
   xhttp.open("GET", "../controller/test.php?name="+str);
+=======
+  xhttp.open("GET", "../controller/test.php?name=" + str);
+>>>>>>> 786f61c1a96bec76688ec17b7af72ebfd0c3e24b
   xhttp.send();
 }
 
 function loadUser() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
+<<<<<<< HEAD
     document.getElementById("txt").innerHTML = this.responseText;
+=======
+    document.getElementById("txt").innerHTML =
+      this.responseText;
+>>>>>>> 786f61c1a96bec76688ec17b7af72ebfd0c3e24b
   }
   xhttp.open("GET", "../controller/searchUser.php");
   xhttp.send();
 }
 
+<<<<<<< HEAD
 function loadData(){
   var str;
   var xhttp = new XMLHttpRequest();
@@ -58,6 +68,8 @@ function loadData(){
 }
 
 
+=======
+>>>>>>> 786f61c1a96bec76688ec17b7af72ebfd0c3e24b
 
 
 

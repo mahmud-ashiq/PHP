@@ -1,4 +1,6 @@
-<?php include '../controller/patientControl.php';?>
+<?php include '../controller/patientControl.php';
+
+?>
 <html>
 <head>
     <script src="../js/myscript.js"></script>
