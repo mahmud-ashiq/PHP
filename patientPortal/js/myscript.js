@@ -29,19 +29,34 @@ function loadDoc() {
   xhttp.onload = function () {
     document.getElementById("demo").innerHTML = this.responseText;
   }
-  xhttp.open("GET", "../controller/test.php?name=" + str);
+  xhttp.open("GET", "../controller/test.php?name="+str);
   xhttp.send();
 }
 
 function loadUser() {
   const xhttp = new XMLHttpRequest();
   xhttp.onload = function () {
-    document.getElementById("txt").innerHTML =
-      this.responseText;
+    document.getElementById("txt").innerHTML = this.responseText;
   }
   xhttp.open("GET", "../controller/searchUser.php");
   xhttp.send();
 }
+
+function loadData(){
+  var str;
+  var xhttp = new XMLHttpRequest();
+  xhttp.open("GET", "https://jsonplaceholder.typicode.com/users", true);
+  xhttp.onload = function(){
+    var data = JSON.parse(xhttp.responseText);
+     data.forEach(function(user ){
+      document.getElementById("output").innerHTML +=  "Name: "+user.name + "<br> ID: "+ user.id +"<br> Username: "+user.username+ "<br><br>" ;
+     });
+    
+    
+  }
+  xhttp.send();
+}
+
 
 
 
