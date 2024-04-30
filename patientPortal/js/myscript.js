@@ -1,13 +1,27 @@
 function validateForm() {
-  var sex = document.getElementById("sex").value;
-  if (!sex) {
-    alert("Gender must be selected");
+  var gender = document.getElementById("gender").value;
+  if (!gender) {
+    document.getElementById("genderError").innerHTML = "Gender must be selected";
     return false;
   }
+  var marital = document.getElementById("marital").value;
+  if (!marital) {
+    document.getElementById("maritalError").innerHTML = "Marital Status must be selected";
+    return false;
+  }  
   var address = document.getElementById("address").value;
   if (address == "") {
-    //alert("asdf");
     document.getElementById("add").innerHTML = "Address must be filled";
+    return false;
+  }
+  var city = document.getElementById("city").value;
+  if (city == "") {
+    document.getElementById("cityError").innerHTML = "City must be entered";
+    return false;
+  }
+  var postal = document.getElementById("postal").value;
+  if (isNaN(postal) || postal.length != 4) {
+    document.getElementById("postalError").innerHTML = "Postal code must be 4 digit number";
     return false;
   }
   var age = document.getElementById("age").value;
@@ -16,11 +30,7 @@ function validateForm() {
     alert("Age must be between 18 to 100");
     return false;
   }
-  var postal = document.getElementById("postal").value;
-  if (isNaN(postal) || postal.length != 5) {
-    alert("postal code must be 5 digit number (JS validation)");
-    return false;
-  }
+  
 }
 function loadDoc() {
   var str = document.getElementById("name").value;
