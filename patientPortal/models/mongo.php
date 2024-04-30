@@ -2,7 +2,7 @@
         require '../mongodbphp/vendor/autoload.php';
         use MongoDB\Driver\ServerApi;
 
-/*// Connection string
+// Connection string
 $uri = 'mongodb+srv://ashiq:ashiq@cluster0.1vw1o0y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 // Set the version of the Stable API on the client
 $apiVersion = new ServerApi(ServerApi::V1);
@@ -16,11 +16,11 @@ $cursor = $collection->find();
 foreach($cursor as $document){
     echo "Inretest rate: ".$document["interest_rate"]."  "."Loan: ".$document['Loan']."<br>";
 }
-/*$collection->insertOne([
+$collection->insertOne([
     'Borrower'=>35,
     "Loan"=>45000,
     "interest_rate"=> 3,
-]);*/
+]);
 /*
 $collection->deleteOne([
     'Borrower'=>34,
@@ -50,11 +50,8 @@ $collection->deleteOne([
    }*/
 class Model{
     function OpenCon(){
-
-            // Connection string
-    $uri = 'mongodb+srv://ashiq:ashiq@cluster0.1vw1o0y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
-    // Set the version of the Stable API on the client
-    $apiVersion = new ServerApi(ServerApi::V1);
+        $uri = 'mongodb+srv://ashiq:ashiq@cluster0.1vw1o0y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
+        $apiVersion = new ServerApi(ServerApi::V1);
         $conn= new MongoDB\Client($uri, [], ['serverApi' => $apiVersion]);
         return $conn;
     }
