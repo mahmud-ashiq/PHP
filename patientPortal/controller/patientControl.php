@@ -2,7 +2,9 @@
  include '../models/mydb.php';
 $name = $email = $phone  =$dob=$password=$address=$city=$postal= "";
 $nameError = $emailError = $phoneError =$dobError=$passwordError=$hasError="";
-
+if(isset($_REQUEST['login'])){
+    header("Location: ../view/login.php");
+}
 if (isset($_REQUEST['submit'])) {
     $email = $_REQUEST['email'];
     if (preg_match("/^[a-zA-z]*$/",$_REQUEST['name']) && !empty($_REQUEST['name'])) {

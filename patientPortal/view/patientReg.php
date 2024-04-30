@@ -7,7 +7,7 @@
 </head>
 
 <body>
-    <form method="POST" action="" onsubmit="return validateForm()">
+    <form method="POST" action="" "onsubmit="return validateForm()">
         <fieldset>
             <legend>Patient Registration</legend>
             <table>
@@ -81,8 +81,8 @@
                     <td><br> </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td colspan=3><input type="submit" value="Submit" name="submit" </td>
+                    <td colspan=2><input type="submit" value="Login" name="login"></td>
+                    <td colspan=2><input type="submit" value="Submit" name="submit"></td>
                 </tr>
                 <tr>
                     <td>

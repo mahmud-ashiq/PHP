@@ -1,7 +1,7 @@
 <?php
         require '../mongodbphp/vendor/autoload.php';
         use MongoDB\Driver\ServerApi;
-
+/*
 // Connection string
 $uri = 'mongodb+srv://ashiq:ashiq@cluster0.1vw1o0y.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0';
 // Set the version of the Stable API on the client
@@ -62,8 +62,12 @@ class Model{
     }
     function login($conn, $email, $password)
     {
-        $sql = "SELECT email, password  FROM patient WHERE email='$email' AND password='$password'";
-        return $conn->query($sql);
+        $collection = $conn->online_health->patient;
+        $cursor = $collection->findOne([
+            'email' => $email,
+            'password' => $password
+        ]);
+        return $cursor;
     }
     function ShowProfile($conn, $email)
     {
